@@ -1,3 +1,5 @@
+//time complexity - o(n)
+
 function same(arr1, arr2){
     if(arr1.length !== arr2.length){
         return false;
@@ -11,9 +13,11 @@ function same(arr1, arr2){
         frequencyCounter2[val] = (frequencyCounter2[val] || 0) + 1
     }
     for(let key in frequencyCounter1){
+        //checks if the values match
         if(!(key ** 2 in frequencyCounter2)){
             return false
         }
+        //if there were two "2"s there would need to be two "4"s
         if(frequencyCounter2[key ** 2] !== frequencyCounter1[key]){
             return false
         }
