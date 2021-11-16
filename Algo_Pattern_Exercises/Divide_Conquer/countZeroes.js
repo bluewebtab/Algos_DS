@@ -1,21 +1,19 @@
-function firstZero(arr, low, high){
+function firstZero(arr, start, end){
 
-    if(high >= low){
-        console.log(high)
-        console.log(low)
-        var mid = low + Math.floor((high - low) / 2);
+    if(end >= start){
+        
+        var mid = start + Math.floor((end - start) / 2);
         console.log(mid)
         if((mid == 0 || arr[mid - 1] == 1) && arr[mid] == 0){
-            console.log(mid)
             return mid;
         }
         if(arr[mid] == 1){
-            console.log(mid + 1, high)
-            return firstZero(arr, (mid + 1), high);
+            
+            return firstZero(arr, (mid + 1), end);
         }      
         else{
-            console.log(low, mid -1 )
-            return firstZero(arr, low, (mid - 1))
+           
+            return firstZero(arr, start, (mid - 1))
         }  
             
     }
@@ -25,7 +23,6 @@ function firstZero(arr, low, high){
 function countZeroes(arr){
     var n = arr.length
     var first = firstZero(arr, 0, n - 1)
-    console.log(first)
     console.log(first)
     if (first == -1){
         return 0;
