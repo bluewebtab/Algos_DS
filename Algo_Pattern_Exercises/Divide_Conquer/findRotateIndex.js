@@ -26,6 +26,7 @@ function binarySearch(array, num, start, end) {
   return -1;
 }
 
+//find the smallest number (pivot)
 function findPivot(arr) {
   if (arr.length === 1 || arr[0] < arr[arr.length - 1]) return 0;
   let start = 0;
@@ -35,6 +36,8 @@ function findPivot(arr) {
     console.log(mid)
     console.log(start)
     console.log(end)
+    // if arr[mid] is greater than arr[mid + 1]
+    //return mid + 1
     if (arr[mid] > arr[mid + 1]) {
       console.log(mid)
       return mid + 1;
@@ -50,4 +53,4 @@ function findPivot(arr) {
     }
   }
 }
-console.log(findRotatedIndex([11,22,33,1,2,3,4], 2));
+console.log(findRotatedIndex([11,22,33,44,55,66,77,1,2,3,4,5], 1));
