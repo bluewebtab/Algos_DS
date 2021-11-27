@@ -86,9 +86,11 @@ const getTrappedRainwaterTwo = function (heights) {
       /*
        * *step 2-------->
        */
+      //step 2a 
       if (heights[left] >= maxLeft) {
         maxLeft = heights[left];
       } else {
+        //step2b
         total += maxLeft - heights[left];
       }
 
@@ -104,9 +106,11 @@ const getTrappedRainwaterTwo = function (heights) {
       /*
        * *step 2-------->
        */
+      //step 2a
       if (heights[right] >= maxRight) {
         maxRight = heights[right];
       } else {
+        //step2b
         total += maxRight - heights[right];
       }
 
