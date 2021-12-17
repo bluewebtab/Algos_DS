@@ -8,7 +8,7 @@
 **What to do?
 ** 1. remove duplicates in-place by modifying the original array
 ** 2. We will use 2 pointer method
-**      (j) is needed toiterate through the given array
+**      (j) is needed to iterate through the given array
 **      (i) is needed to place a unique number to the position next to it
 **
 ** Instructions
